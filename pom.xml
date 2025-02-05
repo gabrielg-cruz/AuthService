@@ -12,7 +12,7 @@
 	<artifactId>quickAuth</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>quickAuth</name>
-	<description>Microservice focused on making user authentification easier</description>
+	<description>Microservice focused on making user authentication easier</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -45,6 +45,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
+			<version>3.0.2</version>
 		</dependency>
 
 		<dependency>
