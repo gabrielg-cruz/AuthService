@@ -33,5 +33,10 @@ public class UserServices  implements IUserServices {
     public User findUserEntityById(int id) {
         return userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
     }
-    
+
+    @Override
+    public void deleteUser(int id) {
+        User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
+        userRepository.delete(user);
+    }
 }
