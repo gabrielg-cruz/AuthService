@@ -16,7 +16,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<UserDTO> createUser(UserDTO userDTO) {
+    public ResponseEntity<UserDTO> createUser(@RequestBody UserDTO userDTO) {
         UserDTO createdUserDTO = userServices.createUser(userDTO);
 
         return new ResponseEntity<>(createdUserDTO, HttpStatus.CREATED);
@@ -28,5 +28,12 @@ public class UserController {
 
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+
+    @GetMapping("/test")
+    public ResponseEntity<String> test() {
+        return new ResponseEntity<>("Test successful", HttpStatus.OK);
+    }
+
 
 }
